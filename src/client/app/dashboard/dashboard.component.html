@@ -1,23 +1,27 @@
 <table class="table">
-    <thead>
-      <tr>
-        <th style="width:10%;">Id</th>
-        <th style="width:10%;">UserId</th>
-        <th style="width:30%;">Title</th>
-        <th style="width:40%;">Body</th>
-        <th class="actions"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- <tr *ngFor="let post of posts">
-        <td>{{post.id}}</td>
-        <td>{{post.userId}}</td>
-        <td>{{post.title}}</td>
-        <td>{{post.body}}</td>
+  <thead>
+    <tr>
+      <th style="width: 60%">Center</th>
+      <th style="width: 10%">Age Limit</th>
+      <th style="width: 20%">Vaccine</th>
+      <th style="width: 10%">Available Qty</th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let c of centers">
+        <td>{{ c.name }}</td>
+        <td>{{ c.sessions[0].min_age_limit }}</td>
+        <td>{{ c.sessions[0].vaccine  }}</td>
+        <td>{{ c.sessions[0].available_capacity  }}</td>
         <td>
-          <button class="btn btn-link far fa-edit" (click)="edit(post)"></button>
-          <button class="btn btn-link far fa-trash-alt" (click)="delete(post)"></button>
-        </td> -->
-      <!-- </tr> -->
-    </tbody>
-  </table>
+          <!-- <button class="btn btn-link far fa-edit" (click)="edit(post)"></button>
+          <button
+            class="btn btn-link far fa-trash-alt"
+            (click)="delete(post)"
+          ></button> -->
+        </td>
+      </tr>
+    
+  </tbody>
+</table>

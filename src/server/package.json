@@ -9,6 +9,7 @@
   "author": "Abhishek Goenka",
   "license": "ISC",
   "dependencies": {
+    "@types/tough-cookie": "^4.0.0",
     "body-parse": "^0.1.0",
     "express": "^4.15.3"
   }

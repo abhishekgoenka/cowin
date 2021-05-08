@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "node publicweb/server/index.js",
-    "start-dev": "node server/server/index.js",
-    "start-ng": "ng serve",
+    "start-server": "node src/server/index.js",
+    "start-client": "ng serve",
+    "start-dev": "concurrently --kill-others \"npm run start-server\" \"npm run start-client\"",
     "build": "ng build",
     "postbuild": "cd src/server/ && npm install  && cd ../.. && cp -r ./src/server/ ./publicweb/",
     "lint": "ng lint"
@@ -30,6 +31,7 @@
     "@angular/cli": "~11.2.7",
     "@angular/compiler-cli": "~11.2.8",
     "@types/node": "^12.11.1",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "concurrently": "^6.1.0"
   }
 }
