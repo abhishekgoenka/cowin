@@ -6,6 +6,7 @@
     "start": "node src/server/index.js",
     "start-ng": "ng serve",
     "build": "ng build",
+    "postbuild":"cp -r ./src/server/ ./publicweb/",
     "lint": "ng lint"
   },
   "private": true,
