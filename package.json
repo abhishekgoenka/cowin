@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node src/server/index.js",
+    "start": "node publicweb/server/index.js",
     "start-ng": "ng serve",
     "build": "ng build",
-    "postbuild":"cp -r ./src/server/ ./publicweb/",
+    "postbuild":"cd src/server/ && npm install  && cd ../.. && cp -r ./src/server/ ./publicweb/",
     "lint": "ng lint"
   },
   "private": true,
