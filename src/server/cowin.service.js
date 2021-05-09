@@ -1,7 +1,8 @@
 const https = require("https");
 
 function getCenters(req, res) {
-  const url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=505&date=08-05-2021`;
+  const url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/calendarByDistrict?district_id=505&date=09-05-2021`;
+  console.log(url);
   https.get(url, (resp) => {
     let data = "";
 
